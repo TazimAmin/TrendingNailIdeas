@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovelAndNotebookHub - Winter Nails That Speak Style</title>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 2px solid #6c757d;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #495057;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #495057;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:active,
+        .nav-menu a:focus {
+            color: #6c757d;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #6c757d;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #495057;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(248,249,250,0.8), rgba(233,236,239,0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="snowflakes" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="30" r="2" fill="%23adb5bd" opacity="0.4"/><circle cx="80" cy="70" r="1.5" fill="%236c757d" opacity="0.3"/><circle cx="50" cy="10" r="2.5" fill="%23dee2e6" opacity="0.5"/><circle cx="10" cy="80" r="1" fill="%23ced4da" opacity="0.3"/><circle cx="90" cy="20" r="1.8" fill="%23adb5bd" opacity="0.4"/></pattern></defs><rect width="100%" height="100%" fill="url(%23snowflakes)"/></svg>') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #495057;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+            letter-spacing: -2px;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            color: #fff !important;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+            cursor: pointer;
+            border: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .cta-button:hover,
+        .cta-button:active,
+        .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+            color: #fff !important;
+            text-decoration: none;
+        }
+
+        /* Winter Background Animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.3"><animate attributeName="cy" values="20;80;20" dur="3s" repeatCount="indefinite"/></circle><circle cx="50" cy="10" r="1.5" fill="%23e9ecef" opacity="0.4"><animate attributeName="cy" values="10;90;10" dur="4s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1" fill="%23dee2e6" opacity="0.3"><animate attributeName="cy" values="30;70;30" dur="3.5s" repeatCount="indefinite"/></circle></svg>') repeat;
+            pointer-events: none;
+            z-index: -1;
+            animation: gentleSnowfall 20s linear infinite;
+        }
+
+        @keyframes gentleSnowfall {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Enhanced Floating Snowflakes Animation */
+        .floating-snowflake {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #adb5bd;
+            opacity: 0.8;
+            animation: advancedSnowfall 12s linear infinite;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        .floating-snowflake:nth-child(1) { 
+            top: -10%; left: 10%; 
+            animation-delay: 0s; 
+            animation-duration: 8s;
+            font-size: 1.2rem;
+        }
+        .floating-snowflake:nth-child(2) { 
+            top: -10%; right: 15%; 
+            animation-delay: 2s; 
+            animation-duration: 10s;
+            font-size: 1.8rem;
+        }
+        .floating-snowflake:nth-child(3) { 
+            top: -10%; left: 60%; 
+            animation-delay: 4s; 
+            animation-duration: 12s;
+            font-size: 1.4rem;
+        }
+        .floating-snowflake:nth-child(4) { 
+            top: -10%; right: 40%; 
+            animation-delay: 1s; 
+            animation-duration: 9s;
+            font-size: 1.6rem;
+        }
+        .floating-snowflake:nth-child(5) { 
+            top: -10%; left: 80%; 
+            animation-delay: 3s; 
+            animation-duration: 11s;
+            font-size: 1.3rem;
+        }
+
+        @keyframes advancedSnowfall {
+            0% { 
+                transform: translateY(-100px) translateX(0px) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+                transform: translateY(-50px) translateX(10px) rotate(45deg) scale(1);
+            }
+            50% {
+                transform: translateY(50vh) translateX(-20px) rotate(180deg) scale(1.1);
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% { 
+                transform: translateY(100vh) translateX(30px) rotate(360deg) scale(0.9);
+                opacity: 0;
+            }
+        }
+
+        /* Frost Effect Animation */
+        .frost-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .frost-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: frostSweep 3s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes frostSweep {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        /* Winter Sparkle Animation */
+        .winter-sparkle {
+            position: relative;
+        }
+
+        .winter-sparkle::after {
+            content: '✨';
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            font-size: 0.8rem;
+            opacity: 0;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+
+        /* Page Sections with Winter Transitions */
+        .page {
+            display: none;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: winterPageEntry 0.8s ease-out;
+        }
+
+        @keyframes winterPageEntry {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+                filter: blur(5px);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translateY(20px) scale(0.98);
+                filter: blur(2px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '💅';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+        }
+
+        /* Blog Preview */
+        .blog-preview {
+            background: #ffffff;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(108, 117, 125, 0.15);
+        }
+
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(173,181,189,0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        .blog-card:hover::before {
+            opacity: 1;
+        }
+
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .blog-image-photo {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #6c757d;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .read-more:hover,
+        .read-more:active,
+        .read-more:focus {
+            color: #adb5bd;
+        }
+
+        /* Blog Page */
+        .blog-page {
+            padding: 6rem 0 4rem;
+            background: #fff;
+            min-height: 100vh;
+        }
+
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .blog-post h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            border-radius: 15px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .content-block {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #6c757d;
+        }
+
+        .content-block h3 {
+            color: #6c757d;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .content-block p {
+            margin-bottom: 1rem;
+        }
+
+        .content-block ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-block li {
+            margin-bottom: 0.5rem;
+        }
+
+        .affiliate-cta {
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            color: #fff !important;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .affiliate-cta:hover,
+        .affiliate-cta:active,
+        .affiliate-cta:focus {
+            transform: scale(1.05);
+            color: #fff !important;
+            text-decoration: none;
+        }
+
+        /* Affiliate Picks */
+        .affiliate-picks {
+            background: #fff;
+            min-height: 100vh;
+            padding: 6rem 0 4rem;
+        }
+
+        .affiliate-disclosure {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(108, 117, 125, 0.2);
+        }
+
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
+            animation: winterGlow 1.5s ease-in-out;
+        }
+
+        @keyframes winterGlow {
+            0% { transform: scale(0) rotate(0deg); }
+            50% { transform: scale(1) rotate(180deg); }
+            100% { transform: scale(1.2) rotate(360deg); }
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Gallery */
+        .gallery-section {
+            background: #f8f8f8;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .gallery-item:hover,
+        .gallery-item:active,
+        .gallery-item:focus {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(108, 117, 125, 0.3);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .gallery-item:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background: #495057;
+            color: #fff;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-about {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #6c757d, #adb5bd);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .social-icon:hover,
+        .social-icon:active,
+        .social-icon:focus {
+            transform: scale(1.1);
+        }
+
+        .footer-disclaimer {
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0,0,0,0.95);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .blog-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Header -->
+  <header class="header">
+   <div class="nav-container">
+    <div class="logo">
+     <div class="logo-icon">
+      💅
+     </div><span class="logo-text">NovelAndNotebookHub</span>
+    </div>
+    <nav>
+     <ul class="nav-menu" id="navMenu">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('blog')">Blog</a></li>
+      <li><a onclick="showPage('affiliate')">Affiliate Picks</a></li>
+     </ul>
+     <div class="mobile-toggle" onclick="toggleMobileMenu()"><span></span> <span></span> <span></span>
+     </div>
+    </nav>
+   </div>
+  </header><!-- Home Page -->
+  <div id="homePage" class="page active"><!-- Hero Section -->
+   <section class="hero">
+    <div class="floating-snowflake">
+     ❄️
+    </div>
+    <div class="floating-snowflake">
+     ❅
+    </div>
+    <div class="floating-snowflake">
+     ❄️
+    </div>
+    <div class="floating-snowflake">
+     ❅
+    </div>
+    <div class="floating-snowflake">
+     ❄️
+    </div>
+    <div class="hero-content">
+     <h1>NovelAndNotebookHub</h1>
+     <p class="tagline">Winter Nails That Speak Style — Curated by NovelAndNotebookHub</p><button class="cta-button" onclick="showPage('affiliate')">Explore Winter Nail Picks</button>
+    </div>
+   </section><!-- Blog Preview Section -->
+   <section class="section blog-preview">
+    <div class="container">
+     <h2 class="section-title">Latest Winter Nail Inspiration</h2>
+     <div class="blog-grid">
+      <div class="blog-card frost-effect winter-sparkle"><img src="https://i.pinimg.com/1200x/51/70/25/5170259f78bb76c3802471b674ba033c.jpg" alt="Pumpkin Spice Orange Nails" class="blog-image-photo" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <div class="blog-content">
+        <h3 class="blog-title">Pumpkin Spice Orange Nails 🎃</h3>
+        <p class="blog-excerpt">Nothing says fall like pumpkin spice! This season, orange nails are trending in deeper, warmer tones like burnt pumpkin, cinnamon, and caramel.</p><a class="read-more" onclick="showPage('blog')">Read More →</a>
+       </div>
+      </div>
+      <div class="blog-card frost-effect winter-sparkle"><img src="https://i.pinimg.com/1200x/0f/8b/39/0f8b39c2fe61a3e746b98d6cc1b5eefb.jpg" alt="Brown &amp; Mocha Neutrals" class="blog-image-photo" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <div class="blog-content">
+        <h3 class="blog-title">Brown &amp; Mocha Neutrals ☕</h3>
+        <p class="blog-excerpt">Mocha, taupe, and latte tones are the new nude this fall. They give your hands a soft, elegant look that feels cozy and expensive.</p><a class="read-more" onclick="showPage('blog')">Read More →</a>
+       </div>
+      </div>
+      <div class="blog-card frost-effect winter-sparkle"><img src="https://i.pinimg.com/736x/ab/1e/ba/ab1eba9d3c2dfcc7e750feff5b81c6cb.jpg" alt="Chrome Gold &amp; Bronze Tips" class="blog-image-photo" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <div class="blog-content">
+        <h3 class="blog-title">Chrome Gold &amp; Bronze Tips ✨</h3>
+        <p class="blog-excerpt">This year's metallic trend is pure fall luxury. Gold and bronze chrome nails add instant glam, especially under soft autumn light.</p><a class="read-more" onclick="showPage('blog')">Read More →</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Gallery Section -->
+   <section class="section gallery-section">
+    <div class="container">
+     <h2 class="section-title">Winter Nail Gallery</h2>
+     <div class="gallery-grid">
+      <div class="gallery-item" onclick="window.open('https://amzn.to/3IFX9fd', '_blank')" style="cursor: pointer;"><img src="https://m.media-amazon.com/images/I/71jGCB4NcwL._SX679_.jpg" alt="Nail Product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+      <div class="gallery-item" onclick="window.open('https://amzn.to/4h6S2kU', '_blank')" style="cursor: pointer;"><img src="https://m.media-amazon.com/images/I/61CetmutU5L._SX466_.jpg" alt="Nail Product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+      <div class="gallery-item" onclick="window.open('https://amzn.to/48IYwEz', '_blank')" style="cursor: pointer;"><img src="https://m.media-amazon.com/images/I/61HP0Ao8HfL._SX466_.jpg" alt="Nail Product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+      <div class="gallery-item" onclick="window.open('https://amzn.to/4q1VAZT', '_blank')" style="cursor: pointer;"><img src="https://m.media-amazon.com/images/I/41bAdY6qFrL._SY300_SX300_QL70_FMwebp_.jpg" alt="Nail Product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+      <div class="gallery-item" onclick="window.open('https://amzn.to/4h6ShfO', '_blank')" style="cursor: pointer;"><img src="https://m.media-amazon.com/images/I/41l9s2XsyQL._SY300_SX300_QL70_FMwebp_.jpg" alt="Nail Product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+      <div class="gallery-item" onclick="window.open('https://amzn.to/42E4Rgt', '_blank')" style="cursor: pointer;"><img src="https://m.media-amazon.com/images/I/71U9wwdKYFL._SX466_.jpg" alt="Nail Product" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+     </div>
+    </div>
+   </section>
+  </div><!-- Blog Page -->
+  <div id="blogPage" class="page">
+   <div class="blog-page">
+    <div class="blog-post">
+     <h1>Winter Nail Trends 2025: Cozy, Chic &amp; Pinterest-Perfect October Nail Ideas ❄️</h1><img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/d2528427-010e-4026-93a0-e8367cdcb9f1.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="Fall Nail Trends 2025" style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px; margin: 2rem 0;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+     <div class="content-block">
+      <p>When the air turns crisp and pumpkin spice fills your favorite café, it's not just your wardrobe that deserves a seasonal refresh — your nails do too!</p>
+      <p>Fall 2025 nail trends are all about warm tones, rich textures, and creative finishes that capture the heart of the season. From pumpkin orange to gold chrome and latte neutrals, this year's looks are cozy, classy, and totally wearable. Whether you're going for an elegant night out or a cozy weekend vibe, these trending designs are perfect for every mood.</p>
+      <p>In this post, you'll find the top 10 fall nail ideas for October 2025, along with simple styling tips and easy ways to shop your favorite looks from Amazon.</p>
+      <h3>1. Pumpkin Spice Orange Nails 🎃</h3>
+      <p>Nothing says fall like pumpkin spice! This season, orange nails are trending in deeper, warmer tones like burnt pumpkin, cinnamon, and caramel. They pair beautifully with sweaters, scarves, and pumpkin latte selfies.</p>
+      <p><strong>Style Tip:</strong> Mix glossy and matte finishes to add dimension to your nails.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4n3dGI9', '_blank')"> 🛍️ Shop pumpkin spice orange nail colors on Amazon </button>
+      <h3>2. Brown &amp; Mocha Neutrals ☕</h3>
+      <p>Mocha, taupe, and latte tones are the new nude this fall. They give your hands a soft, elegant look that feels cozy and expensive — perfect for both work and weekends.</p>
+      <p><strong>Pro Tip:</strong> Try gradient mocha nails or swirl patterns inspired by coffee art.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/42AX6rK', '_blank')"> 🛍️ Shop mocha and neutral gel sets on Amazon </button>
+      <h3>3. Chrome Gold &amp; Bronze Tips ✨</h3>
+      <p>This year's metallic trend is pure fall luxury. Gold and bronze chrome nails add instant glam, especially under soft autumn light.</p>
+      <p><strong>How to Style:</strong> Apply a thin metallic tip over nude polish for a modern, elegant vibe — or go full chrome for a statement look.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4qbo43s', '_blank')"> 🛍️ Shop gold chrome nail powders and kits on Amazon </button>
+      <h3>4. Sweater Texture Nail Art 🧶</h3>
+      <p>Textured "knit-style" nails are stealing the spotlight this October. They're adorable, cozy, and feel like a cable-knit sweater on your fingertips.</p>
+      <p><strong>Style Tip:</strong> Go for creamy whites or light browns to mimic real knit patterns.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4nN0wjN', '_blank')"> 🛍️ Shop 3D nail art gels and tools on Amazon </button>
+      <h3>5. Burgundy &amp; Wine Red Nails 🍷</h3>
+      <p>A fall classic that never fades — deep burgundy and wine red nails are the definition of sophistication. They look stunning against gold jewelry and cozy sweaters.</p>
+      <p><strong>How to Style:</strong> Try glossy wine-red nails for elegance or add gold foil accents for a festive touch.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/42DzNgZ', '_blank')"> 🛍️ Shop deep red gel polishes on Amazon </button>
+      <h3>6. Forest Green &amp; Olive Shades 🌿</h3>
+      <p>Earthy green tones are trending hard in 2025. Shades like moss, olive, and dark forest bring a natural, calming energy to your look — and pair beautifully with plaid and denim.</p>
+      <p><strong>Pro Tip:</strong> Try a matte olive finish for a chic, subtle style.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/3WwUIyz', '_blank')"> 🛍️ Shop trending green nail colors on Amazon </button>
+      <h3>7. Matte Finish Nails 🖤</h3>
+      <p>Matte nails are back in full swing. They give a soft, velvet-like finish that looks effortlessly stylish in deep fall shades like plum, espresso, or navy.</p>
+      <p><strong>Quick Tip:</strong> Always use a quality matte top coat to prevent dullness.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4ojcCAY', '_blank')"> 🛍️ Shop matte nail top coats on Amazon </button>
+      <h3>8. French Tips with a Fall Twist 🍂</h3>
+      <p>The classic French manicure is getting an autumn upgrade. Replace white tips with caramel, rust, or chocolate tones for a cozy, modern look.</p>
+      <p><strong>Style Tip:</strong> Reverse French or diagonal tips are trending across Instagram and Pinterest this fall.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4nGjLvb', '_blank')"> 🛍️ Shop French manicure nail kits on Amazon </button>
+      <h3>9. Minimalist Leaf &amp; Gold Foil Designs 🍃</h3>
+      <p>For those who love simplicity, gold foil and leaf-inspired designs are a beautiful way to capture the essence of fall without going over the top.</p>
+      <p><strong>Style Tip:</strong> Use a nude or beige base, then add tiny gold flakes or minimalist leaf outlines.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/3KL6XoP', '_blank')"> 🛍️ Shop nail foil sets and fall stickers on Amazon </button>
+      <h3>10. Halloween-Inspired Nails 🎃</h3>
+      <p>October isn't complete without a little Halloween magic. Instead of spooky black and orange, this year's trend is classy Halloween — think black marble, subtle glitter, and nude tones.</p>
+      <p><strong>Style Tip:</strong> Add a hint of shimmer or a single accent nail to keep it elegant yet festive.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/48X9C8K', '_blank')"> 🛍️ Shop Halloween nail polish kits and art brushes on Amazon </button>
+      <h3>Nail Care Tips for the Perfect Fall Manicure 💅</h3>
+      <p>Before painting, give your nails some love. Healthy nails make every design look better.</p>
+      <ul>
+       <li>Use cuticle oil daily to prevent dryness.</li>
+       <li>Always apply a base coat to protect from stains.</li>
+       <li>Seal your color with a glossy or matte top coat.</li>
+       <li>Moisturize hands regularly, especially in cooler weather.</li>
+      </ul><button class="affiliate-cta" onclick="window.open('https://amzn.to/4hqfqtX', '_blank')"> 🛍️ Shop professional nail care kits and oils on Amazon </button>
+      <h3>How to Choose the Perfect Fall Nail Shade 🎨</h3>
+      <p>Your ideal fall shade depends on your skin tone and personal style:</p>
+      <ul>
+       <li><strong>Fair Skin:</strong> Mauve, caramel, or olive green.</li>
+       <li><strong>Medium Skin:</strong> Rust orange, rose gold, or deep wine.</li>
+       <li><strong>Deep Skin:</strong> Copper, navy, or metallic gold.</li>
+      </ul>
+      <p><strong>Pro Tip:</strong> Medium nail lengths with rounded or almond shapes are trending for 2025 — feminine, practical, and timeless.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4o9MsjW', '_blank')"> 🛍️ Shop multi-shade nail polish sets on Amazon </button>
+      <h3>Pinterest-Worthy Fall Nail Inspiration 📌</h3>
+      <p>If you love collecting nail inspo, these designs are going viral across Pinterest this October:</p>
+      <ul>
+       <li>Pumpkin Latte Nails ☕</li>
+       <li>Cozy Cable Knit Art 🧶</li>
+       <li>Gold Foil Maple Designs 🍁</li>
+       <li>Chocolate French Tips 🍫</li>
+       <li>Burgundy Gloss Perfection 🍷</li>
+      </ul><button class="affiliate-cta" onclick="window.open('https://amzn.to/46Lfvoa', '_blank')"> 🛍️ Shop full nail art toolkits and color collections on Amazon </button>
+      <h3>Shop the Look — Your Fall Nail Essentials 🍂</h3>
+      <p>Everything you need to create these gorgeous styles is available on Amazon. From salon-quality gel kits to eco-friendly polishes, you can easily recreate your favorite fall looks at home.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/46OMSXj', '_blank')"> 🛍️ Shop trending Fall 2025 Nail Essentials now </button>
+      <p style="text-align: center; font-style: italic; margin-top: 1rem;">Give your nails the autumn makeover they deserve!</p>
+      <h3>Conclusion 🍁</h3>
+      <p>Fall nails in 2025 are a celebration of cozy comfort and modern elegance. From deep mocha shades to glossy gold accents, this season's looks are made to match your pumpkin latte, your oversized sweater, and your mood.</p>
+      <p>Whether you're into DIY nails or prefer salon visits, these designs are easy to try, affordable, and endlessly stylish. So grab your favorite polish, light a cinnamon candle, and let your nails tell your fall story. 🍁✨</p>
+     </div>
+    </div>
+   </div>
+  </div><!-- Affiliate Picks Page -->
+  <div id="affiliatePage" class="page">
+   <section class="affiliate-picks">
+    <div class="container">
+     <h2 class="section-title">Winter Nail Affiliate Picks</h2>
+     <div class="affiliate-disclosure"><strong>Amazon Affiliate Disclosure:</strong> NovelAndNotebookHub is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. We may earn a commission from qualifying purchases made through our affiliate links at no additional cost to you.
+     </div>
+     <div class="product-grid">
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/81LLJvqqkBL._SX466_.jpg" alt="Fall Nail Polish Set" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <h3 class="product-title">Fall Nail Polish Set</h3>
+       <p class="product-description">Perfect autumn colors including burnt orange, mocha, and gold shades for the ultimate fall manicure.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/3IJBbbb', '_blank')"> 🛍️ Shop Fall Nail Polish Set </button>
+      </div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/81Ca4T6Uh9L._SX679_.jpg" alt="Nail Art Brushes" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <h3 class="product-title">Nail Art Brushes</h3>
+       <p class="product-description">Professional-grade brushes for creating intricate fall nail art designs and detailed patterns.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/478w24t', '_blank')"> 🛍️ Shop Nail Art Brushes </button>
+      </div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/81jwq-x+5sL._SX679_.jpg" alt="Nail Care Kit" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <h3 class="product-title">Nail Care Kit</h3>
+       <p class="product-description">Complete nail care essentials to keep your nails healthy and ready for beautiful fall designs.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/4h6cwtX', '_blank')"> 🛍️ Shop Nail Care Kit </button>
+      </div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/91hthUii5RS._SX679_.jpg" alt="Glitter &amp; Gems Set" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       <h3 class="product-title">Glitter &amp; Gems Set</h3>
+       <p class="product-description">Add sparkle to your fall nails with this collection of autumn-themed glitters and decorative gems.</p><button class="affiliate-cta" onclick="window.open('https://amzn.to/46UfIEc', '_blank')"> 🛍️ Shop Glitter &amp; Gems Set </button>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div><!-- Footer -->
+  <footer class="footer">
+   <div class="footer-content">
+    <div class="footer-logo">
+     <div class="logo-icon">
+      💅
+     </div><span class="logo-text">NovelAndNotebookHub</span>
+    </div>
+    <p class="footer-about">NovelAndNotebookHub curates seasonal style, beauty, and Amazon finds for trend-savvy creators. Discover the latest winter nail trends and must-have products to elevate your cozy style.</p>
+    <div class="social-icons"><a href="https://amzn.to/4q4orws" class="social-icon" target="_blank" rel="noopener noreferrer">🛒</a> <a href="https://in.pinterest.com/NovelAndNotebookHub/" class="social-icon" target="_blank" rel="noopener noreferrer">📌</a>
+    </div>
+    <div class="footer-disclaimer">
+     <p>© 2025 NovelAndNotebookHub. All rights reserved.</p>
+     <p>Amazon Affiliate Disclosure: We earn from qualifying purchases made through our affiliate links.</p>
+    </div>
+   </div>
+  </footer>
+  <script>
+        function showPage(page) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => {
+                p.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(page + 'Page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Close mobile menu if open
+            const navMenu = document.getElementById('navMenu');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            if (navMenu) {
+                navMenu.classList.toggle('active');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            
+            if (navMenu && mobileToggle && 
+                !navMenu.contains(event.target) && 
+                !mobileToggle.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Add touch event handlers for better mobile compatibility
+        function addTouchHandlers() {
+            // Handle all clickable elements
+            const clickableElements = document.querySelectorAll('button, .cta-button, .affiliate-cta, .read-more, .nav-menu a, .gallery-item, .social-icon');
+            
+            clickableElements.forEach(element => {
+                // Add touchstart event for immediate feedback
+                element.addEventListener('touchstart', function(e) {
+                    this.style.opacity = '0.8';
+                }, { passive: true });
+                
+                // Reset opacity on touchend
+                element.addEventListener('touchend', function(e) {
+                    setTimeout(() => {
+                        this.style.opacity = '1';
+                    }, 150);
+                }, { passive: true });
+                
+                // Handle touch cancel
+                element.addEventListener('touchcancel', function(e) {
+                    this.style.opacity = '1';
+                }, { passive: true });
+            });
+        }
+
+        // Winter scroll animations
+        function initWinterAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'winterFadeIn 0.8s ease-out forwards';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and sections
+            const animatedElements = document.querySelectorAll('.blog-card, .product-card, .gallery-item, .section-title');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                observer.observe(el);
+            });
+        }
+
+        // Add winter fade-in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes winterFadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px) scale(0.95);
+                    filter: blur(3px);
+                }
+                50% {
+                    opacity: 0.7;
+                    filter: blur(1px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                    filter: blur(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize page on load
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+            addTouchHandlers();
+            initWinterAnimations();
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99533eef031c29f5',t:'MTc2MTU3OTE0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
